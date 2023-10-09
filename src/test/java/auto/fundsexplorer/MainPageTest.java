@@ -37,7 +37,7 @@ public class MainPageTest {
         return valor;
     }
     private String trataPercentual(String valor){
-        valor = valor.replace("%","").replace(",",".");
+        valor = valor.replaceAll("%","").replace(",",".");
         valor = String.valueOf(Double.parseDouble(valor)/100);
         valor = valor.replaceAll("\\.", ",");
         return valor;
@@ -78,29 +78,26 @@ public class MainPageTest {
         String valorFinal = valor;
         valorFinal = valorFinal.replace("N/A", "0");
         if(linha>=0){
-            switch (coluna){
-                case 2 | 3 | 17:
-                    valorFinal = trataMoeda(valorFinal);
-                    break;
-                case 9 :
-                    valorFinal = trataPercentual(valorFinal);
-                    break;
-                default:
-                    break;
-            }
+            Boolean moeda = ((coluna == 2)||(coluna == 3)||(coluna == 17));
+            Boolean percentual = (((coluna >= 6)&&(coluna <= 16))||((coluna >= 20)&&(coluna <= 23)));
+            if(moeda)valorFinal = trataMoeda(valorFinal);
+            if(percentual)valorFinal = trataPercentual(valorFinal);
         }
         return valorFinal;
     }
 
+
     @Test
     public void login() throws IOException {
-        FileWriter fw = new FileWriter("C:/Temp/fii.txt", false);
+        FileWriter fw = new FileWriter("C:/Temp/fii_resumo.txt", false);
+        FileWriter fw2 = new FileWriter("C:/Temp/fii.txt", false);
         fundsExplorer = new MainPage(driver);
         while(!fundsExplorer.link.isDisplayed()){
             System.out.println("Aguardando a tabela carregar!");
         }
 
         AtomicReference<String> linhaOut = new AtomicReference<>("");
+        AtomicReference<String> linhaOut2 = new AtomicReference<>("");
         if(fundsExplorer.link.isDisplayed()){
             if(fundsExplorer.tableRankingContainer.isDisplayed()){
                 //tbody
@@ -110,17 +107,21 @@ public class MainPageTest {
                     AtomicInteger linha = new AtomicInteger(0);
                     AtomicInteger j = new AtomicInteger();
                     colunas.forEach(coluna -> {
-                        if((j.get() ==0)||(j.get() ==1)||(j.get() ==2)||(j.get() ==3)||(j.get() ==5)||(j.get() ==9)||(j.get() ==17)||(j.get() ==19)||(j.get() ==24)||(j.get() ==25)||(j.get() ==26)){
+                        //Resumo
+                        if((j.get() ==0)||(j.get() ==1)||(j.get() ==2)||(j.get() ==3)||(j.get() ==5)||(j.get() ==9)||(j.get() ==17)||(j.get() ==19)||(j.get() ==24)||(j.get() ==25)||(j.get() ==26))
                             linhaOut.set(linhaOut.get().concat(tratarValor(coluna.getText(), j.get(), linha.get())));
-                            if(j.get() !=26)
-                                linhaOut.set(linhaOut.get().concat("\t"));
-                        }
+
+                        //Completo
+                        linhaOut2.set(linhaOut2.get().concat(tratarValor(coluna.getText(), j.get(), linha.get())));
 
                         if(j.get() ==26){
                             linhaOut.set(linhaOut.get().concat("\n"));
+                            linhaOut2.set(linhaOut2.get().concat("\n"));
                             j.set(0);
                             linha.getAndIncrement();
                         }else{
+                            linhaOut.set(linhaOut.get().concat("\t"));
+                            linhaOut2.set(linhaOut2.get().concat("\t"));
                             j.getAndIncrement();
                         }
                     });
@@ -130,6 +131,10 @@ public class MainPageTest {
         fw.write(linhaOut.get());
         fw.flush();
         fw.close();
+
+        fw2.write(linhaOut2.get());
+        fw2.flush();
+        fw2.close();
     }
 
 
