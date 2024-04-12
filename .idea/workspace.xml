@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8c73f190-f787-4e73-ad3e-3eb841fee8d9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/0fb98a8f-3a6e-4164-a657-07b0f0a94ac6-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/191636a9-eac0-4ad6-93aa-aaa9ce6dd882-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/21145e48-a10a-4fac-8da7-d42bf6377fc5-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/42b55dc2-3bbc-45fc-9a68-46a545aa1c1b-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/6353bdb8-1f43-4fbd-9e91-c87b9a13b4ba-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/74959f7d-ed94-4396-b82a-1cbaed4fdf41-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/7db85241-bd14-4d97-9693-b95bbace8b1e-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/93663923-e20d-4ab6-8456-a0a8475622f7-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/9f2fe583-dba6-4926-9f73-ff38a3ff4781-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/b56874ee-ca08-49a2-8cbd-e49b18ffc183-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/bea8bf6f-d4f2-4814-a9ff-f5861afbfa5f-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/bf385200-acac-4990-9cc0-3a4f901f9845-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/ce31c9e0-41e4-44fd-af69-b9f7c44d2215-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/d9c7cf01-0aff-4b25-8aa9-ef231a42d6fc-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/e11a8016-db60-4a84-948a-d85b15439daf-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/fb4ddf73-b957-43f0-b350-70e3b0f5bff4-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/browsers.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/auto/fundsexplorer/FundsPageTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/auto/fundsexplorer/MainPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/auto/fundsexplorer/MainPageTest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2expvCLDSybYNBx5iH0UBXrnZxS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/GitHub/autoFundsExplorer/src/main/java/com/github/tombessa/autofundsexplorer/config/security",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "spring.configuration.checksum": "e2c34f36116916f783e09ac5a5fd0df1",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\GitHub\autoFundsExplorer\src\main\java\com\github\tombessa\autofundsexplorer\config\security" />
+      <recent name="C:\GitHub\autoFundsExplorer\src\main\resources" />
+      <recent name="C:\GitHub\autoFundsExplorer\src\main\java\br\jus\trt1\egarimpobackend\model\dto" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.github.tombessa.autofundsexplorer.rest" />
+      <recent name="com.github.tombessa.autofundsexplorer.util" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="AutofundsexplorerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="auto-funds-explorer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.tombessa.autofundsexplorer.AutofundsexplorerApplication" />
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8c73f190-f787-4e73-ad3e-3eb841fee8d9" name="Changes" comment="" />
+      <created>1712856314621</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712856314621</updated>
+      <workItem from="1712856316384" duration="41000" />
+      <workItem from="1712856366994" duration="2666000" />
+      <workItem from="1712859051495" duration="7837000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
