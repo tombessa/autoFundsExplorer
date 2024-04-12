@@ -1,7 +1,10 @@
 package com.github.tombessa.autofundsexplorer.service;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
+import com.github.tombessa.autofundsexplorer.model.dto.PatrimonialDTO;
+import com.google.gson.JsonArray;
+
+import java.util.List;
+
 
 /**
  *
@@ -9,7 +12,7 @@ import org.json.JSONObject;
  */
 
 public interface AutoFundsExplorerService {
-    Object ranking();
+    JsonArray ranking();
 
-    Object patrimonials(String ticket);
+    List<PatrimonialDTO> patrimonials(String ticket, List<PatrimonialDTO> ret);
 }

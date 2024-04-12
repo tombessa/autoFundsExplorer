@@ -1,12 +1,14 @@
 package com.github.tombessa.autofundsexplorer.service.impl;
 
+import com.github.tombessa.autofundsexplorer.model.dto.PatrimonialDTO;
 import com.github.tombessa.autofundsexplorer.service.AutoFundsExplorerService;
 import com.github.tombessa.autofundsexplorer.util.Constants;
 import com.github.tombessa.autofundsexplorer.util.HttpUtil;
 import com.github.tombessa.autofundsexplorer.util.exception.BusinessException;
 import org.springframework.stereotype.Service;
-import org.json.*;
+import com.google.gson.*;
 import java.io.IOException;
+import java.util.List;
 
 @Service
 public class AutoFundsExplorerServiceImpl implements AutoFundsExplorerService {
@@ -20,12 +22,14 @@ public class AutoFundsExplorerServiceImpl implements AutoFundsExplorerService {
     //https://www.fundsexplorer.com.br/wp-json/funds/v1/get-ranking
 
     @Override
-    public Object ranking() {
+    public JsonArray ranking() {
         try {
-            String ret =  HttpUtil.get("https://www.fundsexplorer.com.br/wp-json/funds/v1/get-ranking");
-            ret = (new String("{\"lista\":")).concat(ret).concat("}");
-            JSONObject json = new JSONObject(ret);
-            return json.get("lista");
+            String json =  HttpUtil.get("https://www.fundsexplorer.com.br/wp-json/funds/v1/get-ranking");
+            JsonParser jsonParser = new JsonParser();
+            json = json.replace("\"[","[").replace("]\"", "]").replace("\\\"", "\"");
+            JsonArray jsonArray = jsonParser.parse(json).getAsJsonArray();
+
+            return jsonArray;
         } catch (IOException e) {
             e.printStackTrace();
             throw new BusinessException(Constants.ERRO_HTTP);
@@ -33,12 +37,17 @@ public class AutoFundsExplorerServiceImpl implements AutoFundsExplorerService {
     }
 
     @Override
-    public Object patrimonials(String ticket) {
+    public List<PatrimonialDTO> patrimonials(String ticket, List<PatrimonialDTO> ret) {
         try {
-            String ret =  HttpUtil.get("https://www.fundsexplorer.com.br/wp-json/funds/v1/patrimonials/"+ticket);
-            ret = (new String("{\"lista\":")).concat(ret).concat("}");
-            JSONObject json = new JSONObject(ret);
-            return json.get("lista");
+            String json =  HttpUtil.get("https://www.fundsexplorer.com.br/wp-json/funds/v1/patrimonials/"+ticket);
+            JsonParser jsonParser = new JsonParser();
+            json = json.replace("\"[","[").replace("]\"", "]").replace("\\\"", "\"");
+            JsonArray jsonArray = jsonParser.parse(json).getAsJsonArray();
+            Gson gson = new Gson();
+            jsonArray.forEach(jsonElement -> {
+                ret.add(gson.fromJson(jsonElement, PatrimonialDTO.class));
+            });
+            return ret;
         } catch (IOException e) {
             e.printStackTrace();
             throw new BusinessException(Constants.ERRO_HTTP);
