@@ -1,22 +1,22 @@
 package com.github.tombessa.autofundsexplorer.rest;
 
+import com.github.tombessa.autofundsexplorer.model.dto.FIIDTO;
 import com.github.tombessa.autofundsexplorer.model.dto.PatrimonialDTO;
+import com.github.tombessa.autofundsexplorer.model.dto.PropriedadeDTO;
 import com.github.tombessa.autofundsexplorer.service.AutoFundsExplorerService;
-import com.google.gson.JsonArray;
+import com.github.tombessa.autofundsexplorer.util.Constants;
 import io.swagger.annotations.ApiOperation;
 import ma.glasnost.orika.MapperFacade;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.User;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.constraints.NotNull;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -44,10 +44,31 @@ public class AutoFundsController {
         return ret;
     }
 
+    @ApiOperation("Retorna as propriedades")
+    @GetMapping("/propriedades/{ticket}")
+    public List<PropriedadeDTO>  propriedades(@AuthenticationPrincipal User user, @PathVariable("ticket") @NotNull String ticket){
+        List<PropriedadeDTO> ret = new ArrayList<>();
+        ret = this.autoFundsExplorerService.propriedades(ticket, ret);
+        return ret;
+    }
+
     @ApiOperation("Retorna o ranking")
     @GetMapping("/ranking")
-    public JsonArray ranking(@AuthenticationPrincipal User user)  {
-        return this.autoFundsExplorerService.ranking();
+    public List<FIIDTO> ranking(@AuthenticationPrincipal User user,
+                                @RequestParam String dataInicio,
+                                @RequestParam String dataFim)  {
+        LocalDate oInicio=null;
+        LocalDate oFim=null;
+        DateTimeFormatter oFormatter = DateTimeFormatter.ofPattern(Constants.DATE_FORMAT);
+        if(dataInicio!=null) oInicio = LocalDate.parse(dataInicio, oFormatter);
+        if(dataFim!=null) oFim = LocalDate.parse(dataFim, oFormatter);
+        if((oInicio!=null)&&(oFim==null)) oFim = LocalDate.now();
+        List<FIIDTO> ret = new ArrayList<>();
+        if((oInicio!=null)&&(oInicio!=null)){
+            return this.autoFundsExplorerService.rankingHistorico(ret, oInicio, oFim);
+        }else{
+            return this.autoFundsExplorerService.ranking(ret);
+        }
     }
 
 }
