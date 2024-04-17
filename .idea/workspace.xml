@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8c73f190-f787-4e73-ad3e-3eb841fee8d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tombessa/autofundsexplorer/model/dto/PatrimonialDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tombessa/autofundsexplorer/model/dto/PatrimonialDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tombessa/autofundsexplorer/rest/AutoFundsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tombessa/autofundsexplorer/rest/AutoFundsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tombessa/autofundsexplorer/service/AutoFundsExplorerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tombessa/autofundsexplorer/service/AutoFundsExplorerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tombessa/autofundsexplorer/service/impl/AutoFundsExplorerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tombessa/autofundsexplorer/service/impl/AutoFundsExplorerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tombessa/autofundsexplorer/util/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tombessa/autofundsexplorer/util/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,6 +116,7 @@
       <workItem from="1712953629050" duration="799000" />
       <workItem from="1712954445030" duration="2315000" />
       <workItem from="1713033817867" duration="9438000" />
+      <workItem from="1713287126964" duration="7836000" />
     </task>
     <servers />
   </component>

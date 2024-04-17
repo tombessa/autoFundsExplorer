@@ -57,18 +57,20 @@ public class AutoFundsController {
     public List<FIIDTO> ranking(@AuthenticationPrincipal User user,
                                 @RequestParam String dataInicio,
                                 @RequestParam String dataFim)  {
+        List<FIIDTO> ret = new ArrayList<>();
         LocalDate oInicio=null;
         LocalDate oFim=null;
         DateTimeFormatter oFormatter = DateTimeFormatter.ofPattern(Constants.DATE_FORMAT);
         if(dataInicio!=null) oInicio = LocalDate.parse(dataInicio, oFormatter);
         if(dataFim!=null) oFim = LocalDate.parse(dataFim, oFormatter);
         if((oInicio!=null)&&(oFim==null)) oFim = LocalDate.now();
-        List<FIIDTO> ret = new ArrayList<>();
+
         if((oInicio!=null)&&(oInicio!=null)){
-            return this.autoFundsExplorerService.rankingHistorico(ret, oInicio, oFim);
+            ret = this.autoFundsExplorerService.rankingHistorico(ret, oInicio, oFim);
         }else{
-            return this.autoFundsExplorerService.ranking(ret);
+            ret = this.autoFundsExplorerService.ranking(ret);
         }
+        return ret;
     }
 
 }
